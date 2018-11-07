@@ -30,9 +30,9 @@ public class ArrayMethods{
         sums[i] = rowSum(ary,i);
       }
       return sums;
- }
+    }
 
-     public static int[] allRowSums(int[][] ary){
+     public static int[] allColSums(int[][] ary){
        int max = 0;
         for(int i = 0; i < ary.length; i++) {
           if(ary[i].length > max)
@@ -47,5 +47,23 @@ public class ArrayMethods{
      }
 
      // Part 3
+
+     public static boolean isRowMagic(int[][] ary){
+       int[] c = allRowSums(ary);
+       for(int i=0; i<c.length; i++) {
+         if(c[i] != c[0])
+         return false;
+      }
+     return true;
+ }
+
+    public static boolean isColumnMagic(int[][] ary){
+      int[] c = allColSums(ary);
+      for(int i=0; i<c.length; i++) {
+        if(c[i] != c[0])
+        return false;
+     }
+     return true;
+   }
 
 }
