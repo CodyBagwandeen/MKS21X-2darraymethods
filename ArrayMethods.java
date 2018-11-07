@@ -24,6 +24,14 @@ public class ArrayMethods{
 
     // Part 2
 
+    public static int[] allRowSums(int[][] ary){
+      int[] sums = new int[ary.length];
+      for(int i = 0; i < ary.length; i++) {
+        sums[i] = rowSum(ary,i);
+      }
+      return sums;
+ }
+
      public static int[] allRowSums(int[][] ary){
        int max = 0;
         for(int i = 0; i < ary.length; i++) {
@@ -39,5 +47,5 @@ public class ArrayMethods{
      }
 
      // Part 3
-     
+
 }
